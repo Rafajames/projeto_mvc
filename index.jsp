@@ -1,6 +1,12 @@
 <%
   sessao = request.getSession().getAttribute("nome");
+  if (nomeSessao == null) {
+    // Não fez o Login
+  } else {
+    // Esta Logado
 
+
+  }
 %>
 <html>
   <head>
