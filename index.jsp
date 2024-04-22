@@ -1,11 +1,15 @@
 <%
+
+  String status = "";
   sessao = request.getSession().getAttribute("nome");
   if (nomeSessao == null) {
     // Não fez o Login
+
+    status = "Nenhum usuaario Logado, faça o login!";
   } else {
     // Esta Logado
 
-
+      status = "Usuario autenticado: " + nomeSessao;
   }
 %>
 <html>
@@ -14,6 +18,8 @@
   </head>
   
   <body>
+
+    <%= status %>
     <h2>Sistema de Renovacao de Emprestimos</h2>
     
     <form action="autenticacao" method="post">
